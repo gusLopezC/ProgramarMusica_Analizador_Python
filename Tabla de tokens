@@ -1,0 +1,58 @@
+texto hola:"Hola".						
+importa[ruta].							
+@este es un comentario de una linea				
+<<esto es un 							
+comentario de varias 
+lineas>>
+var i:1.							
+nota W(AM,10).							
+repetir:i<10[							
+reproducir(W).							
+silencio(50).							
+reproducir(BM,10*i).					
+
+reproducir(identificador,numero).
+
+silencio(50).
+reproducir(C5,10).						
+silencio(50).
+reproducir(FA,10).
+silencio(50).
+Coro.									
+incrementa(i,1).						
+Muestra("Texto").						
+].										
+
+estrofa:Coro[							
+reproducir(C5,10).			
+silencio(50).
+].										
+----------------------------------------------------------------
+
+TEXTO hola:"Hola".						
+IMPORTA[ruta].							
+@este es un comentario de una linea				
+<<esto es un 							
+comentario de varias 
+lineas>>
+VAR i:1.							
+NOTA W(AM,10).	
+
+REPETIR:i<10[											
+SILENCIO(50).							
+REPRODUCIR(BM,10*i).					
+
+SILENCIO(50).
+REPRODUCIR(C5,10).						
+SILENCIO(50).
+REPRODUCIR(FA,10).
+SILENCIO(50).
+CORO.									
+INCREMENTA(i,1).						
+MUESTRA("Texto").						
+].										
+
+estrofa:Coro[							
+reproducir(C5,10).			
+silencio(50).
+].		

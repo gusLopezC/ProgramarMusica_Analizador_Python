@@ -1,0 +1,87 @@
+Created by PLY version 3.4 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    reproducir
+    repetir
+    silencio
+    nota
+    incrementa
+    duracion
+    muestra
+    var
+    texto
+    IDENT
+    NUMERO
+    ASIGNAR
+    MENORQUE
+    MENORIGUAL
+    MAYORQUE
+    MAYORIGUAL
+    IGUAL
+    PUNTOCOMA
+    COMA
+    PUNTO
+    DOSPUNTOS
+    PARENTESIS
+    PARIZQ
+    PARDER
+    CORIZQ
+    CORDER
+    LLAIZQ
+    LLADER
+
+Grammar
+
+Rule 0     S' -> program
+Rule 1     program -> block
+Rule 2     block -> constDecl varDecl procDecl statement
+Rule 3     constDecl -> const constAssignmentList
+Rule 4     constDecl -> empty
+Rule 5     emptry -> <empty>
+
+Terminals, with rules where they appear
+
+ASIGNAR              : 
+COMA                 : 
+CORDER               : 
+CORIZQ               : 
+DOSPUNTOS            : 
+IDENT                : 
+IGUAL                : 
+LLADER               : 
+LLAIZQ               : 
+MAYORIGUAL           : 
+MAYORQUE             : 
+MENORIGUAL           : 
+MENORQUE             : 
+NUMERO               : 
+PARDER               : 
+PARENTESIS           : 
+PARIZQ               : 
+PUNTO                : 
+PUNTOCOMA            : 
+const                : 3
+duracion             : 
+error                : 
+incrementa           : 
+muestra              : 
+nota                 : 
+repetir              : 
+reproducir           : 
+silencio             : 
+texto                : 
+var                  : 
+
+Nonterminals, with rules where they appear
+
+block                : 1
+constAssignmentList  : 3
+constDecl            : 2
+emptry               : 
+empty                : 4
+procDecl             : 2
+program              : 0
+statement            : 2
+varDecl              : 2
+

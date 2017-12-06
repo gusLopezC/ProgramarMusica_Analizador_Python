@@ -1,0 +1,30 @@
+TEXTO hola:"Hola".						
+IMPORTA [ruta].							
+@este es un comentario de una linea				
+<<esto es un 							
+comentario de varias 
+lineas>>
+CONST
+VAR i:1.							
+NOTA W(AM,10).							
+REPETIR:i<10[							
+REPRODUCIR(W).							
+SILENCIO(50).							
+REPRODUCIR(BM,10*i).					
+
+REPRODUCIR(identificador,numero).
+
+SILENCIO(50).
+REPRODUCIR(C5,10).						
+SILENCIO(50).
+REPRODUCIR(FA,10).
+SILENCIO(50).
+Coro.									
+INCREMENTA(i,1).						
+MUESTRA("TEXTO").						
+].										
+
+estrofa:Coro[							
+REPRODUCIR(C5,10).			
+SILENCIO(50).
+].										
