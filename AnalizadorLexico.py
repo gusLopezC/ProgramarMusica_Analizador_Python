@@ -4,39 +4,36 @@ import codecs
 import os
 import sys
 
-reservadas=[ 'REPRODUCIR','REPETIR','SILENCIO','NOTA','INCREMENTA','DURACION','MUESTRA',
-          'CONST','VAR','TEXTO'
+reservadas=[ 'REPRODUCIR','IMPORTA','SILENCIO','NOTA','INCREMENTA','DURACION','MUESTRA',
+          'CONST','VAR','TEXTO','INICIO','FIN'
           ]
 
 
 tokens = reservadas + ['IDENT','NUMERO','ASIGNAR',
-          'MENORQUE','MENORIGUAL','MAYORQUE','MAYORIGUAL','IGUAL','POR',
-     	'PUNTOCOMA','COMA','PUNTO','DOSPUNTOS','PARENTESIS',
+          'PUNTOCOMA','COMA','PUNTO','DOSPUNTOS','PARENTESIS',
+          'AUMENT','POR',
      	'PARIZQ','PARDER', #()
      	'CORIZQ','CORDER', #[]
-     	'LLAIZQ','LLADER' #{}
+     	#'LLAIZQ','LLADER' #{}
            ] 
 
 t_ignore = '\t'
 t_ASIGNAR = r'=='
-t_MENORQUE= r'>'
-t_MENORIGUAL= r'>='
-t_MAYORQUE= r'<'
-t_MAYORIGUAL= r'<='
-t_IGUAL = r'='
+     
 t_DOSPUNTOS = r':'
 t_PUNTO= r'\.'
 t_PUNTOCOMA  = r';'
 t_COMA  = r','
 t_POR = r'\*'
+t_AUMENT = r'\+\+'
 
 t_PARENTESIS = r'\"'
 t_PARIZQ  = r'\('
 t_PARDER  = r'\)'
 t_CORIZQ  = r'\['
 t_CORDER  = r'\]'
-t_LLAIZQ  = r'\{'
-t_LLADER  = r'\}'
+#t_LLAIZQ  = r'\{'
+#t_LLADER  = r'\}'
 
 
 def t_IDENT(t):
@@ -77,8 +74,11 @@ fp.close()
 analizador = lex.lex()
 
 analizador.input(cadena)
-print("---------------------------- Analizador Lexico ----------------------------")
+print("------------------------------------ Analizador Lexico -----------------------------------------")
 while True:
      tok = analizador.token()
      if not tok : break
      print (tok)
+
+
+print("-----------------------------------------------------------------------------------------------")

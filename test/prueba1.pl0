@@ -1,30 +1,22 @@
+INICIO
+
 TEXTO hola:"Hola".						
 IMPORTA [ruta].							
-@este es un comentario de una linea				
-<<esto es un 							
-comentario de varias 
-lineas>>
-CONST
-VAR i:1.							
-NOTA W(AM,10).							
-REPETIR:i<10[							
-REPRODUCIR(W).							
-SILENCIO(50).							
-REPRODUCIR(BM,10*i).					
-
-REPRODUCIR(identificador,numero).
-
+@este es un comentario de una linea			
+CONST G==SOL.
+VAR i==1.	
+DURACION==4.				
+NOTA W(AM,10).												
+REPRODUCIR(W,10).							
 SILENCIO(50).
-REPRODUCIR(C5,10).						
+REPRODUCIR(W,10).							
+SILENCIO(50).	
+REPRODUCIR(W,10*i).							
+SILENCIO(50).								
+INCREMENTA(i++1).	
+MUESTRA(TEXTO).	
+																				
+REPRODUCIR(C5,DURACION).			
 SILENCIO(50).
-REPRODUCIR(FA,10).
-SILENCIO(50).
-Coro.									
-INCREMENTA(i,1).						
-MUESTRA("TEXTO").						
-].										
-
-estrofa:Coro[							
-REPRODUCIR(C5,10).			
-SILENCIO(50).
-].										
+				
+FIN;					
