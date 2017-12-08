@@ -126,7 +126,7 @@ def p_error(p):
 
 def traducir(result):
 	graphFile = open('graphviztrhee.vz','w')
-	graphFile.write(result.traducir())
+	graphFile.write(str(result))
 	graphFile.close()
 	print("El programa traducido se guardo en \"graphviztrhee.vz\"")
 
@@ -135,8 +135,8 @@ fp = codecs.open(archivo,"r","utf-8")
 cadena = fp.read()
 fp.close()
 
-yacc.yacc()
-result = yacc.parse(cadena)
+parse = yacc.yacc()
+result = parse.parse(cadena)
 
 #result.imprimir(" ")
 #print(result.traducir())
