@@ -12,7 +12,7 @@ Rule 6     constAssignmentList -> constAssignmentList IMPORTA CORIZQ IDENT CORDE
 Rule 7     constAssignmentList -> constAssignmentList CONST IDENT ASIGNAR IDENT PUNTO
 Rule 8     constAssignmentList -> constAssignmentList VAR IDENT ASIGNAR NUMERO PUNTO
 Rule 9     constAssignmentList -> constAssignmentList NOTA IDENT PARIZQ IDENT COMA NUMERO PARDER PUNTO
-Rule 10    constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA DURACION PARDER PUNTO
+Rule 10    consAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA DURACION PARDER PUNTO
 Rule 11    constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA NUMERO PARDER PUNTO
 Rule 12    constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA NUMERO POR IDENT PARDER PUNTO
 Rule 13    constAssignmentList -> constAssignmentList SILENCIO PARIZQ NUMERO PARDER PUNTO
@@ -58,6 +58,7 @@ error                :
 Nonterminals, with rules where they appear
 
 block                : 1
+consAssignmentList   : 
 constAssignmentList  : 3 6 7 8 9 10 11 12 13 14 15 16 17
 constDecl            : 2
 empty                : 4 18 19 20
@@ -117,7 +118,6 @@ state 4
     (7) constAssignmentList -> . constAssignmentList CONST IDENT ASIGNAR IDENT PUNTO
     (8) constAssignmentList -> . constAssignmentList VAR IDENT ASIGNAR NUMERO PUNTO
     (9) constAssignmentList -> . constAssignmentList NOTA IDENT PARIZQ IDENT COMA NUMERO PARDER PUNTO
-    (10) constAssignmentList -> . constAssignmentList REPRODUCIR PARIZQ IDENT COMA DURACION PARDER PUNTO
     (11) constAssignmentList -> . constAssignmentList REPRODUCIR PARIZQ IDENT COMA NUMERO PARDER PUNTO
     (12) constAssignmentList -> . constAssignmentList REPRODUCIR PARIZQ IDENT COMA NUMERO POR IDENT PARDER PUNTO
     (13) constAssignmentList -> . constAssignmentList SILENCIO PARIZQ NUMERO PARDER PUNTO
@@ -162,7 +162,6 @@ state 8
     (7) constAssignmentList -> constAssignmentList . CONST IDENT ASIGNAR IDENT PUNTO
     (8) constAssignmentList -> constAssignmentList . VAR IDENT ASIGNAR NUMERO PUNTO
     (9) constAssignmentList -> constAssignmentList . NOTA IDENT PARIZQ IDENT COMA NUMERO PARDER PUNTO
-    (10) constAssignmentList -> constAssignmentList . REPRODUCIR PARIZQ IDENT COMA DURACION PARDER PUNTO
     (11) constAssignmentList -> constAssignmentList . REPRODUCIR PARIZQ IDENT COMA NUMERO PARDER PUNTO
     (12) constAssignmentList -> constAssignmentList . REPRODUCIR PARIZQ IDENT COMA NUMERO POR IDENT PARDER PUNTO
     (13) constAssignmentList -> constAssignmentList . SILENCIO PARIZQ NUMERO PARDER PUNTO
@@ -177,10 +176,10 @@ state 8
     VAR             shift and go to state 15
     NOTA            shift and go to state 16
     REPRODUCIR      shift and go to state 17
-    SILENCIO        shift and go to state 19
-    INCREMENTA      shift and go to state 20
-    MUESTRA         shift and go to state 21
-    DURACION        shift and go to state 18
+    SILENCIO        shift and go to state 18
+    INCREMENTA      shift and go to state 19
+    MUESTRA         shift and go to state 20
+    DURACION        shift and go to state 21
     FIN             shift and go to state 22
 
 
@@ -246,7 +245,6 @@ state 16
 
 state 17
 
-    (10) constAssignmentList -> constAssignmentList REPRODUCIR . PARIZQ IDENT COMA DURACION PARDER PUNTO
     (11) constAssignmentList -> constAssignmentList REPRODUCIR . PARIZQ IDENT COMA NUMERO PARDER PUNTO
     (12) constAssignmentList -> constAssignmentList REPRODUCIR . PARIZQ IDENT COMA NUMERO POR IDENT PARDER PUNTO
 
@@ -255,30 +253,30 @@ state 17
 
 state 18
 
-    (16) constAssignmentList -> constAssignmentList DURACION . ASIGNAR NUMERO PUNTO
+    (13) constAssignmentList -> constAssignmentList SILENCIO . PARIZQ NUMERO PARDER PUNTO
 
-    ASIGNAR         shift and go to state 31
+    PARIZQ          shift and go to state 31
 
 
 state 19
 
-    (13) constAssignmentList -> constAssignmentList SILENCIO . PARIZQ NUMERO PARDER PUNTO
+    (14) constAssignmentList -> constAssignmentList INCREMENTA . PARIZQ IDENT AUMENT NUMERO PARDER PUNTO
 
     PARIZQ          shift and go to state 32
 
 
 state 20
 
-    (14) constAssignmentList -> constAssignmentList INCREMENTA . PARIZQ IDENT AUMENT NUMERO PARDER PUNTO
+    (15) constAssignmentList -> constAssignmentList MUESTRA . PARIZQ TEXTO PARDER PUNTO
 
     PARIZQ          shift and go to state 33
 
 
 state 21
 
-    (15) constAssignmentList -> constAssignmentList MUESTRA . PARIZQ TEXTO PARDER PUNTO
+    (16) constAssignmentList -> constAssignmentList DURACION . ASIGNAR NUMERO PUNTO
 
-    PARIZQ          shift and go to state 34
+    ASIGNAR         shift and go to state 34
 
 
 state 22
@@ -339,7 +337,6 @@ state 29
 
 state 30
 
-    (10) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ . IDENT COMA DURACION PARDER PUNTO
     (11) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ . IDENT COMA NUMERO PARDER PUNTO
     (12) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ . IDENT COMA NUMERO POR IDENT PARDER PUNTO
 
@@ -348,30 +345,30 @@ state 30
 
 state 31
 
-    (16) constAssignmentList -> constAssignmentList DURACION ASIGNAR . NUMERO PUNTO
+    (13) constAssignmentList -> constAssignmentList SILENCIO PARIZQ . NUMERO PARDER PUNTO
 
     NUMERO          shift and go to state 42
 
 
 state 32
 
-    (13) constAssignmentList -> constAssignmentList SILENCIO PARIZQ . NUMERO PARDER PUNTO
+    (14) constAssignmentList -> constAssignmentList INCREMENTA PARIZQ . IDENT AUMENT NUMERO PARDER PUNTO
 
-    NUMERO          shift and go to state 43
+    IDENT           shift and go to state 43
 
 
 state 33
 
-    (14) constAssignmentList -> constAssignmentList INCREMENTA PARIZQ . IDENT AUMENT NUMERO PARDER PUNTO
+    (15) constAssignmentList -> constAssignmentList MUESTRA PARIZQ . TEXTO PARDER PUNTO
 
-    IDENT           shift and go to state 44
+    TEXTO           shift and go to state 44
 
 
 state 34
 
-    (15) constAssignmentList -> constAssignmentList MUESTRA PARIZQ . TEXTO PARDER PUNTO
+    (16) constAssignmentList -> constAssignmentList DURACION ASIGNAR . NUMERO PUNTO
 
-    TEXTO           shift and go to state 45
+    NUMERO          shift and go to state 45
 
 
 state 35
@@ -428,7 +425,6 @@ state 40
 
 state 41
 
-    (10) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT . COMA DURACION PARDER PUNTO
     (11) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT . COMA NUMERO PARDER PUNTO
     (12) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT . COMA NUMERO POR IDENT PARDER PUNTO
 
@@ -437,30 +433,30 @@ state 41
 
 state 42
 
-    (16) constAssignmentList -> constAssignmentList DURACION ASIGNAR NUMERO . PUNTO
+    (13) constAssignmentList -> constAssignmentList SILENCIO PARIZQ NUMERO . PARDER PUNTO
 
-    PUNTO           shift and go to state 52
+    PARDER          shift and go to state 52
 
 
 state 43
 
-    (13) constAssignmentList -> constAssignmentList SILENCIO PARIZQ NUMERO . PARDER PUNTO
+    (14) constAssignmentList -> constAssignmentList INCREMENTA PARIZQ IDENT . AUMENT NUMERO PARDER PUNTO
 
-    PARDER          shift and go to state 53
+    AUMENT          shift and go to state 53
 
 
 state 44
 
-    (14) constAssignmentList -> constAssignmentList INCREMENTA PARIZQ IDENT . AUMENT NUMERO PARDER PUNTO
+    (15) constAssignmentList -> constAssignmentList MUESTRA PARIZQ TEXTO . PARDER PUNTO
 
-    AUMENT          shift and go to state 54
+    PARDER          shift and go to state 54
 
 
 state 45
 
-    (15) constAssignmentList -> constAssignmentList MUESTRA PARIZQ TEXTO . PARDER PUNTO
+    (16) constAssignmentList -> constAssignmentList DURACION ASIGNAR NUMERO . PUNTO
 
-    PARDER          shift and go to state 55
+    PUNTO           shift and go to state 55
 
 
 state 46
@@ -500,15 +496,34 @@ state 50
 
 state 51
 
-    (10) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA . DURACION PARDER PUNTO
     (11) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA . NUMERO PARDER PUNTO
     (12) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA . NUMERO POR IDENT PARDER PUNTO
 
-    DURACION        shift and go to state 61
-    NUMERO          shift and go to state 62
+    NUMERO          shift and go to state 61
 
 
 state 52
+
+    (13) constAssignmentList -> constAssignmentList SILENCIO PARIZQ NUMERO PARDER . PUNTO
+
+    PUNTO           shift and go to state 62
+
+
+state 53
+
+    (14) constAssignmentList -> constAssignmentList INCREMENTA PARIZQ IDENT AUMENT . NUMERO PARDER PUNTO
+
+    NUMERO          shift and go to state 63
+
+
+state 54
+
+    (15) constAssignmentList -> constAssignmentList MUESTRA PARIZQ TEXTO PARDER . PUNTO
+
+    PUNTO           shift and go to state 64
+
+
+state 55
 
     (16) constAssignmentList -> constAssignmentList DURACION ASIGNAR NUMERO PUNTO .
 
@@ -525,32 +540,11 @@ state 52
     FIN             reduce using rule 16 (constAssignmentList -> constAssignmentList DURACION ASIGNAR NUMERO PUNTO .)
 
 
-state 53
-
-    (13) constAssignmentList -> constAssignmentList SILENCIO PARIZQ NUMERO PARDER . PUNTO
-
-    PUNTO           shift and go to state 63
-
-
-state 54
-
-    (14) constAssignmentList -> constAssignmentList INCREMENTA PARIZQ IDENT AUMENT . NUMERO PARDER PUNTO
-
-    NUMERO          shift and go to state 64
-
-
-state 55
-
-    (15) constAssignmentList -> constAssignmentList MUESTRA PARIZQ TEXTO PARDER . PUNTO
-
-    PUNTO           shift and go to state 65
-
-
 state 56
 
     (5) constAssignmentList -> TEXTO IDENT DOSPUNTOS PARENTESIS IDENT . PARENTESIS PUNTO
 
-    PARENTESIS      shift and go to state 66
+    PARENTESIS      shift and go to state 65
 
 
 state 57
@@ -608,26 +602,19 @@ state 60
 
     (9) constAssignmentList -> constAssignmentList NOTA IDENT PARIZQ IDENT COMA . NUMERO PARDER PUNTO
 
-    NUMERO          shift and go to state 67
+    NUMERO          shift and go to state 66
 
 
 state 61
 
-    (10) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA DURACION . PARDER PUNTO
-
-    PARDER          shift and go to state 68
-
-
-state 62
-
     (11) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA NUMERO . PARDER PUNTO
     (12) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA NUMERO . POR IDENT PARDER PUNTO
 
-    PARDER          shift and go to state 69
-    POR             shift and go to state 70
+    PARDER          shift and go to state 67
+    POR             shift and go to state 68
 
 
-state 63
+state 62
 
     (13) constAssignmentList -> constAssignmentList SILENCIO PARIZQ NUMERO PARDER PUNTO .
 
@@ -644,14 +631,14 @@ state 63
     FIN             reduce using rule 13 (constAssignmentList -> constAssignmentList SILENCIO PARIZQ NUMERO PARDER PUNTO .)
 
 
-state 64
+state 63
 
     (14) constAssignmentList -> constAssignmentList INCREMENTA PARIZQ IDENT AUMENT NUMERO . PARDER PUNTO
 
-    PARDER          shift and go to state 71
+    PARDER          shift and go to state 69
 
 
-state 65
+state 64
 
     (15) constAssignmentList -> constAssignmentList MUESTRA PARIZQ TEXTO PARDER PUNTO .
 
@@ -668,49 +655,42 @@ state 65
     FIN             reduce using rule 15 (constAssignmentList -> constAssignmentList MUESTRA PARIZQ TEXTO PARDER PUNTO .)
 
 
-state 66
+state 65
 
     (5) constAssignmentList -> TEXTO IDENT DOSPUNTOS PARENTESIS IDENT PARENTESIS . PUNTO
 
-    PUNTO           shift and go to state 72
+    PUNTO           shift and go to state 70
+
+
+state 66
+
+    (9) constAssignmentList -> constAssignmentList NOTA IDENT PARIZQ IDENT COMA NUMERO . PARDER PUNTO
+
+    PARDER          shift and go to state 71
 
 
 state 67
 
-    (9) constAssignmentList -> constAssignmentList NOTA IDENT PARIZQ IDENT COMA NUMERO . PARDER PUNTO
+    (11) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA NUMERO PARDER . PUNTO
 
-    PARDER          shift and go to state 73
+    PUNTO           shift and go to state 72
 
 
 state 68
 
-    (10) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA DURACION PARDER . PUNTO
+    (12) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA NUMERO POR . IDENT PARDER PUNTO
 
-    PUNTO           shift and go to state 74
+    IDENT           shift and go to state 73
 
 
 state 69
 
-    (11) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA NUMERO PARDER . PUNTO
+    (14) constAssignmentList -> constAssignmentList INCREMENTA PARIZQ IDENT AUMENT NUMERO PARDER . PUNTO
 
-    PUNTO           shift and go to state 75
+    PUNTO           shift and go to state 74
 
 
 state 70
-
-    (12) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA NUMERO POR . IDENT PARDER PUNTO
-
-    IDENT           shift and go to state 76
-
-
-state 71
-
-    (14) constAssignmentList -> constAssignmentList INCREMENTA PARIZQ IDENT AUMENT NUMERO PARDER . PUNTO
-
-    PUNTO           shift and go to state 77
-
-
-state 72
 
     (5) constAssignmentList -> TEXTO IDENT DOSPUNTOS PARENTESIS IDENT PARENTESIS PUNTO .
 
@@ -727,31 +707,14 @@ state 72
     FIN             reduce using rule 5 (constAssignmentList -> TEXTO IDENT DOSPUNTOS PARENTESIS IDENT PARENTESIS PUNTO .)
 
 
-state 73
+state 71
 
     (9) constAssignmentList -> constAssignmentList NOTA IDENT PARIZQ IDENT COMA NUMERO PARDER . PUNTO
 
-    PUNTO           shift and go to state 78
+    PUNTO           shift and go to state 75
 
 
-state 74
-
-    (10) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA DURACION PARDER PUNTO .
-
-    PUNTOCOMA       reduce using rule 10 (constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA DURACION PARDER PUNTO .)
-    IMPORTA         reduce using rule 10 (constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA DURACION PARDER PUNTO .)
-    CONST           reduce using rule 10 (constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA DURACION PARDER PUNTO .)
-    VAR             reduce using rule 10 (constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA DURACION PARDER PUNTO .)
-    NOTA            reduce using rule 10 (constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA DURACION PARDER PUNTO .)
-    REPRODUCIR      reduce using rule 10 (constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA DURACION PARDER PUNTO .)
-    SILENCIO        reduce using rule 10 (constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA DURACION PARDER PUNTO .)
-    INCREMENTA      reduce using rule 10 (constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA DURACION PARDER PUNTO .)
-    MUESTRA         reduce using rule 10 (constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA DURACION PARDER PUNTO .)
-    DURACION        reduce using rule 10 (constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA DURACION PARDER PUNTO .)
-    FIN             reduce using rule 10 (constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA DURACION PARDER PUNTO .)
-
-
-state 75
+state 72
 
     (11) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA NUMERO PARDER PUNTO .
 
@@ -768,14 +731,14 @@ state 75
     FIN             reduce using rule 11 (constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA NUMERO PARDER PUNTO .)
 
 
-state 76
+state 73
 
     (12) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA NUMERO POR IDENT . PARDER PUNTO
 
-    PARDER          shift and go to state 79
+    PARDER          shift and go to state 76
 
 
-state 77
+state 74
 
     (14) constAssignmentList -> constAssignmentList INCREMENTA PARIZQ IDENT AUMENT NUMERO PARDER PUNTO .
 
@@ -792,7 +755,7 @@ state 77
     FIN             reduce using rule 14 (constAssignmentList -> constAssignmentList INCREMENTA PARIZQ IDENT AUMENT NUMERO PARDER PUNTO .)
 
 
-state 78
+state 75
 
     (9) constAssignmentList -> constAssignmentList NOTA IDENT PARIZQ IDENT COMA NUMERO PARDER PUNTO .
 
@@ -809,14 +772,14 @@ state 78
     FIN             reduce using rule 9 (constAssignmentList -> constAssignmentList NOTA IDENT PARIZQ IDENT COMA NUMERO PARDER PUNTO .)
 
 
-state 79
+state 76
 
     (12) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA NUMERO POR IDENT PARDER . PUNTO
 
-    PUNTO           shift and go to state 80
+    PUNTO           shift and go to state 77
 
 
-state 80
+state 77
 
     (12) constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA NUMERO POR IDENT PARDER PUNTO .
 

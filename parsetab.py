@@ -5,9 +5,9 @@ _tabversion = '3.2'
 
 _lr_method = 'LALR'
 
-_lr_signature = b'\x10\xc7\xdb\x1c\xc20P\xcd\xf0\xb4\xb1\xb52\xc4\x89\xe9'
+_lr_signature = b'\x88\xbf\x04rnL)\xe5.\x17]a\xea9\xde\xfa'
     
-_lr_action_items = {'INICIO':([0,],[4,]),'$end':([0,1,2,3,5,6,7,10,11,12,24,25,],[-21,0,-1,-21,-4,-21,-18,-21,-19,-3,-2,-20,]),'TEXTO':([4,34,],[9,45,]),'PUNTOCOMA':([8,22,35,52,57,58,59,63,65,72,74,75,77,78,80,],[12,35,-17,-16,-6,-7,-8,-13,-15,-5,-10,-11,-14,-9,-12,]),'IMPORTA':([8,35,52,57,58,59,63,65,72,74,75,77,78,80,],[13,-17,-16,-6,-7,-8,-13,-15,-5,-10,-11,-14,-9,-12,]),'CONST':([8,35,52,57,58,59,63,65,72,74,75,77,78,80,],[14,-17,-16,-6,-7,-8,-13,-15,-5,-10,-11,-14,-9,-12,]),'VAR':([8,35,52,57,58,59,63,65,72,74,75,77,78,80,],[15,-17,-16,-6,-7,-8,-13,-15,-5,-10,-11,-14,-9,-12,]),'NOTA':([8,35,52,57,58,59,63,65,72,74,75,77,78,80,],[16,-17,-16,-6,-7,-8,-13,-15,-5,-10,-11,-14,-9,-12,]),'REPRODUCIR':([8,35,52,57,58,59,63,65,72,74,75,77,78,80,],[17,-17,-16,-6,-7,-8,-13,-15,-5,-10,-11,-14,-9,-12,]),'SILENCIO':([8,35,52,57,58,59,63,65,72,74,75,77,78,80,],[19,-17,-16,-6,-7,-8,-13,-15,-5,-10,-11,-14,-9,-12,]),'INCREMENTA':([8,35,52,57,58,59,63,65,72,74,75,77,78,80,],[20,-17,-16,-6,-7,-8,-13,-15,-5,-10,-11,-14,-9,-12,]),'MUESTRA':([8,35,52,57,58,59,63,65,72,74,75,77,78,80,],[21,-17,-16,-6,-7,-8,-13,-15,-5,-10,-11,-14,-9,-12,]),'DURACION':([8,35,51,52,57,58,59,63,65,72,74,75,77,78,80,],[18,-17,61,-16,-6,-7,-8,-13,-15,-5,-10,-11,-14,-9,-12,]),'FIN':([8,35,52,57,58,59,63,65,72,74,75,77,78,80,],[22,-17,-16,-6,-7,-8,-13,-15,-5,-10,-11,-14,-9,-12,]),'IDENT':([9,14,15,16,26,30,33,38,40,46,70,],[23,27,28,29,37,41,44,48,50,56,76,]),'CORIZQ':([13,],[26,]),'PARIZQ':([17,19,20,21,29,],[30,32,33,34,40,]),'ASIGNAR':([18,27,28,],[31,38,39,]),'DOSPUNTOS':([23,],[36,]),'NUMERO':([31,32,39,51,54,60,],[42,43,49,62,64,67,]),'PARENTESIS':([36,56,],[46,66,]),'CORDER':([37,],[47,]),'COMA':([41,50,],[51,60,]),'PUNTO':([42,47,48,49,53,55,66,68,69,71,73,79,],[52,57,58,59,63,65,72,74,75,77,78,80,]),'PARDER':([43,45,61,62,64,67,76,],[53,55,68,69,71,73,79,]),'AUMENT':([44,],[54,]),'POR':([62,],[70,]),}
+_lr_action_items = {'INICIO':([0,],[4,]),'$end':([0,1,2,3,5,6,7,10,11,12,24,25,],[-21,0,-1,-21,-4,-21,-18,-21,-19,-3,-2,-20,]),'TEXTO':([4,33,],[9,44,]),'PUNTOCOMA':([8,22,35,55,57,58,59,62,64,70,72,74,75,77,],[12,35,-17,-16,-6,-7,-8,-13,-15,-5,-11,-14,-9,-12,]),'IMPORTA':([8,35,55,57,58,59,62,64,70,72,74,75,77,],[13,-17,-16,-6,-7,-8,-13,-15,-5,-11,-14,-9,-12,]),'CONST':([8,35,55,57,58,59,62,64,70,72,74,75,77,],[14,-17,-16,-6,-7,-8,-13,-15,-5,-11,-14,-9,-12,]),'VAR':([8,35,55,57,58,59,62,64,70,72,74,75,77,],[15,-17,-16,-6,-7,-8,-13,-15,-5,-11,-14,-9,-12,]),'NOTA':([8,35,55,57,58,59,62,64,70,72,74,75,77,],[16,-17,-16,-6,-7,-8,-13,-15,-5,-11,-14,-9,-12,]),'REPRODUCIR':([8,35,55,57,58,59,62,64,70,72,74,75,77,],[17,-17,-16,-6,-7,-8,-13,-15,-5,-11,-14,-9,-12,]),'SILENCIO':([8,35,55,57,58,59,62,64,70,72,74,75,77,],[18,-17,-16,-6,-7,-8,-13,-15,-5,-11,-14,-9,-12,]),'INCREMENTA':([8,35,55,57,58,59,62,64,70,72,74,75,77,],[19,-17,-16,-6,-7,-8,-13,-15,-5,-11,-14,-9,-12,]),'MUESTRA':([8,35,55,57,58,59,62,64,70,72,74,75,77,],[20,-17,-16,-6,-7,-8,-13,-15,-5,-11,-14,-9,-12,]),'DURACION':([8,35,55,57,58,59,62,64,70,72,74,75,77,],[21,-17,-16,-6,-7,-8,-13,-15,-5,-11,-14,-9,-12,]),'FIN':([8,35,55,57,58,59,62,64,70,72,74,75,77,],[22,-17,-16,-6,-7,-8,-13,-15,-5,-11,-14,-9,-12,]),'IDENT':([9,14,15,16,26,30,32,38,40,46,68,],[23,27,28,29,37,41,43,48,50,56,73,]),'CORIZQ':([13,],[26,]),'PARIZQ':([17,18,19,20,29,],[30,31,32,33,40,]),'ASIGNAR':([21,27,28,],[34,38,39,]),'DOSPUNTOS':([23,],[36,]),'NUMERO':([31,34,39,51,53,60,],[42,45,49,61,63,66,]),'PARENTESIS':([36,56,],[46,65,]),'CORDER':([37,],[47,]),'COMA':([41,50,],[51,60,]),'PARDER':([42,44,61,63,66,73,],[52,54,67,69,71,76,]),'AUMENT':([43,],[53,]),'PUNTO':([45,47,48,49,52,54,65,67,69,71,76,],[55,57,58,59,62,64,70,72,74,75,77,]),'POR':([61,],[68,]),}
 
 _lr_action = { }
 for _k, _v in _lr_action_items.items():
@@ -29,22 +29,22 @@ _lr_productions = [
   ('program -> block','program',1,'p_program','AnalizadorSintactico.py',18),
   ('block -> constDecl varDecl procDecl statement','block',4,'p_block','AnalizadorSintactico.py',23),
   ('constDecl -> INICIO constAssignmentList PUNTOCOMA','constDecl',3,'p_constDecl','AnalizadorSintactico.py',28),
-  ('constDecl -> empty','constDecl',1,'p_constDeclEmpty','AnalizadorSintactico.py',35),
-  ('constAssignmentList -> TEXTO IDENT DOSPUNTOS PARENTESIS IDENT PARENTESIS PUNTO','constAssignmentList',7,'p_constAssignmentList1','AnalizadorSintactico.py',41),
-  ('constAssignmentList -> constAssignmentList IMPORTA CORIZQ IDENT CORDER PUNTO','constAssignmentList',6,'p_constAssignmentList2','AnalizadorSintactico.py',46),
-  ('constAssignmentList -> constAssignmentList CONST IDENT ASIGNAR IDENT PUNTO','constAssignmentList',6,'p_constAssignmentList3','AnalizadorSintactico.py',51),
-  ('constAssignmentList -> constAssignmentList VAR IDENT ASIGNAR NUMERO PUNTO','constAssignmentList',6,'p_constAssignmentList4','AnalizadorSintactico.py',56),
-  ('constAssignmentList -> constAssignmentList NOTA IDENT PARIZQ IDENT COMA NUMERO PARDER PUNTO','constAssignmentList',9,'p_constAssignmentList5','AnalizadorSintactico.py',61),
-  ('constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA DURACION PARDER PUNTO','constAssignmentList',8,'p_constFAssignmentList6','AnalizadorSintactico.py',66),
-  ('constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA NUMERO PARDER PUNTO','constAssignmentList',8,'p_constFAssignmentList62','AnalizadorSintactico.py',71),
-  ('constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA NUMERO POR IDENT PARDER PUNTO','constAssignmentList',10,'p_constFAssignmentList63','AnalizadorSintactico.py',76),
-  ('constAssignmentList -> constAssignmentList SILENCIO PARIZQ NUMERO PARDER PUNTO','constAssignmentList',6,'p_constAssignmentList7','AnalizadorSintactico.py',82),
-  ('constAssignmentList -> constAssignmentList INCREMENTA PARIZQ IDENT AUMENT NUMERO PARDER PUNTO','constAssignmentList',8,'p_constAssignmentList8','AnalizadorSintactico.py',87),
-  ('constAssignmentList -> constAssignmentList MUESTRA PARIZQ TEXTO PARDER PUNTO','constAssignmentList',6,'p_constAssignmentList9','AnalizadorSintactico.py',93),
-  ('constAssignmentList -> constAssignmentList DURACION ASIGNAR NUMERO PUNTO','constAssignmentList',5,'p_constAssignmentList10','AnalizadorSintactico.py',98),
-  ('constAssignmentList -> constAssignmentList FIN PUNTOCOMA','constAssignmentList',3,'p_constAssignmentList11','AnalizadorSintactico.py',103),
-  ('varDecl -> empty','varDecl',1,'p_varDeclEmpty','AnalizadorSintactico.py',110),
-  ('procDecl -> empty','procDecl',1,'p_procDeclEmpty','AnalizadorSintactico.py',116),
-  ('statement -> empty','statement',1,'p_statementEmpty','AnalizadorSintactico.py',123),
-  ('empty -> <empty>','empty',0,'p_empty','AnalizadorSintactico.py',129),
+  ('constDecl -> empty','constDecl',1,'p_constDeclEmpty','AnalizadorSintactico.py',33),
+  ('constAssignmentList -> TEXTO IDENT DOSPUNTOS PARENTESIS IDENT PARENTESIS PUNTO','constAssignmentList',7,'p_constAssignmentList1','AnalizadorSintactico.py',38),
+  ('constAssignmentList -> constAssignmentList IMPORTA CORIZQ IDENT CORDER PUNTO','constAssignmentList',6,'p_constAssignmentList2','AnalizadorSintactico.py',43),
+  ('constAssignmentList -> constAssignmentList CONST IDENT ASIGNAR IDENT PUNTO','constAssignmentList',6,'p_constAssignmentList3','AnalizadorSintactico.py',48),
+  ('constAssignmentList -> constAssignmentList VAR IDENT ASIGNAR NUMERO PUNTO','constAssignmentList',6,'p_constAssignmentList4','AnalizadorSintactico.py',53),
+  ('constAssignmentList -> constAssignmentList NOTA IDENT PARIZQ IDENT COMA NUMERO PARDER PUNTO','constAssignmentList',9,'p_constAssignmentList5','AnalizadorSintactico.py',58),
+  ('consAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA DURACION PARDER PUNTO','consAssignmentList',8,'p_constAssignmentList6','AnalizadorSintactico.py',63),
+  ('constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA NUMERO PARDER PUNTO','constAssignmentList',8,'p_constAssignmentList62','AnalizadorSintactico.py',68),
+  ('constAssignmentList -> constAssignmentList REPRODUCIR PARIZQ IDENT COMA NUMERO POR IDENT PARDER PUNTO','constAssignmentList',10,'p_constAssignmentList63','AnalizadorSintactico.py',73),
+  ('constAssignmentList -> constAssignmentList SILENCIO PARIZQ NUMERO PARDER PUNTO','constAssignmentList',6,'p_constAssignmentList7','AnalizadorSintactico.py',78),
+  ('constAssignmentList -> constAssignmentList INCREMENTA PARIZQ IDENT AUMENT NUMERO PARDER PUNTO','constAssignmentList',8,'p_constAssignmentList8','AnalizadorSintactico.py',83),
+  ('constAssignmentList -> constAssignmentList MUESTRA PARIZQ TEXTO PARDER PUNTO','constAssignmentList',6,'p_constAssignmentList9','AnalizadorSintactico.py',88),
+  ('constAssignmentList -> constAssignmentList DURACION ASIGNAR NUMERO PUNTO','constAssignmentList',5,'p_constAssignmentList10','AnalizadorSintactico.py',93),
+  ('constAssignmentList -> constAssignmentList FIN PUNTOCOMA','constAssignmentList',3,'p_constAssignmentList11','AnalizadorSintactico.py',98),
+  ('varDecl -> empty','varDecl',1,'p_varDeclEmpty','AnalizadorSintactico.py',104),
+  ('procDecl -> empty','procDecl',1,'p_procDeclEmpty','AnalizadorSintactico.py',109),
+  ('statement -> empty','statement',1,'p_statementEmpty','AnalizadorSintactico.py',114),
+  ('empty -> <empty>','empty',0,'p_empty','AnalizadorSintactico.py',120),
 ]

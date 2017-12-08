@@ -15,8 +15,7 @@ REPRODUCIR(W,10*i).
 SILENCIO(50).								
 INCREMENTA(i++1).	
 MUESTRA(TEXTO).	
-																				
-REPRODUCIR(C5,DURACION).			
+																							
 SILENCIO(50).
 				
 FIN;					
