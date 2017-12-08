@@ -1,5 +1,7 @@
 txt = " "
 cont = 0
+
+
 def incrementarContador():
 	global cont
 	cont +=1
@@ -31,6 +33,7 @@ class program(Nodo):
 		self.son1.imprimir(" "+ident)
 
 		print(ident+"Nodo: "+self.name)
+		
 	def traducir(self):
 		global txt
 		id =  incrementarContador()
@@ -201,11 +204,12 @@ class constAssignmentList2(Nodo):
 		self.son4.imprimir(" "+ident)
 		self.son5.imprimir(" "+ident)
 		self.son6.imprimir(" "+ident)
+
 		print (ident + "Nodo: "+self.name)
 
 	def traducir(self):
 		global txt
-		id =  incrementarContador()
+		id =  incremetarContador()
 		son1 = self.son1.traducir()
 		son2 = self.son2.traducir()
 		son3 = self.son3.traducir()
@@ -221,6 +225,7 @@ class constAssignmentList2(Nodo):
 		txt += id + " -> " + son5 + "\n\t"
 		txt += id + " -> " + son6 + "\n\t"
 		txt += id + " -> " + son7 + "\n\t"
+		
 		return id
 	
 
@@ -594,4 +599,3 @@ class constAssignmentList11(Nodo):
 		txt += id + " -> " + son3 + "\n\t"
 		return id
 	
-

@@ -9,13 +9,26 @@ DURACION==4.
 NOTA W(AM,10).												
 REPRODUCIR(W,10).							
 SILENCIO(50).
+REPRODUCIR(W,4).							
+SILENCIO(50).
 REPRODUCIR(W,10).							
 SILENCIO(50).	
 REPRODUCIR(W,10*i).							
 SILENCIO(50).								
 INCREMENTA(i++1).	
-MUESTRA(TEXTO).	
-																							
+MUESTRA(TEXTO).																					
 SILENCIO(50).
-				
+@-----segunda nota-----------
+NOTA G(SOL,10).												
+REPRODUCIR(G,10).							
+SILENCIO(50).
+REPRODUCIR(G,4).							
+SILENCIO(50).
+REPRODUCIR(G,10).							
+SILENCIO(50).	
+REPRODUCIR(G,20*i).							
+SILENCIO(50).								
+INCREMENTA(i++1).	
+MUESTRA(TEXTO).	
+@-----adios-----------		
 FIN;					

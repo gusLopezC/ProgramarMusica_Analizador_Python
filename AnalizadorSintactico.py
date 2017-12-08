@@ -57,7 +57,7 @@ def p_constAssignmentList4(p):
 def p_constAssignmentList5(p):
 	'''constAssignmentList : constAssignmentList NOTA IDENT PARIZQ IDENT COMA NUMERO PARDER PUNTO '''
 	p[0] = constAssignmentList5(p[1],p[2],p[3],p[4],p[5],p[6],p[7],p[8],p[9],"constAssignmentList5")
-	print ("<con></con>stAssignmentList 5")
+	print ("constAssignmentList 5")
 
 def p_constAssignmentList6(p):
 	'''consAssignmentList : constAssignmentList REPRODUCIR  PARIZQ IDENT COMA DURACION PARDER PUNTO '''
@@ -86,17 +86,17 @@ def p_constAssignmentList8(p):
 
 def p_constAssignmentList9(p):
 	'''constAssignmentList : constAssignmentList MUESTRA  PARIZQ TEXTO PARDER PUNTO '''
-	p[0] = constAssignmentList9(p[1],p[2],p[3],p[4],p[5],p[6],"constAssignmentList8")
+	p[0] = constAssignmentList9(p[1],p[2],p[3],p[4],p[5],p[6],"constAssignmentList9")
 	print ("constAssignmentList 9")
 
 def p_constAssignmentList10(p):
 	'''constAssignmentList : constAssignmentList DURACION ASIGNAR NUMERO PUNTO '''
-	p[0] = constAssignmentList10(p[1],p[2],p[3],p[4],p[5],"constAssignmentList8")
+	p[0] = constAssignmentList10(p[1],p[2],p[3],p[4],p[5],"constAssignmentList10")
 	print ("constAssignmentList 10")
 
 def p_constAssignmentList11(p):
 	'''constAssignmentList : constAssignmentList FIN PUNTOCOMA'''
-	p[0] = constAssignmentList10(p[1],p[2],p[3],"constAssignmentList8")
+	p[0] = constAssignmentList11(p[1],p[2],p[3],"constAssignmentList11")
 	print ("constAssignmentList 11")
 
 #----------end declaracion constantes----------------
@@ -125,24 +125,21 @@ def p_error(p):
 	#print("error en la linea "+str(p.lineno))
 
 def traducir(result):
-	graphFile =  open('graphiztrhee.vz','w')
+	graphFile = open('graphviztrhee.vz','w')
 	graphFile.write(result.traducir())
-	graphFile.close
-	print("\t\tEl programa traducido se guardo en \"graphviztrhee.vz\"")
-
+	graphFile.close()
+	print("El programa traducido se guardo en \"graphviztrhee.vz\"")
 
 archivo = '/home/gus/Projects/ComposicionMusica/test/prueba1.pl0' 
 fp = codecs.open(archivo,"r","utf-8")
 cadena = fp.read()
 fp.close()
 
-parser = yacc.yacc()
-result = parser.parse(cadena)
+yacc.yacc()
+result = yacc.parse(cadena)
 
-
-result.imprimir(" ")
+#result.imprimir(" ")
 #print(result.traducir())
 traducir(result)
 
-
-print(result)
+#print(result)
